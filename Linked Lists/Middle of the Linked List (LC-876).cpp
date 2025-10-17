@@ -9,7 +9,24 @@
  * };
  */
 
-// Method 2:
+// Method 1(Preferred Approach):
+
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        ListNode* slow=head;
+        ListNode* fast=head;
+// When the fast pointer points to the last node or goes beyond last node, the slow pointer points to the middle node
+// Its because when the slow pointer moves one node ahead, the fast pointer moves two nodes ahead covering double distance
+        while(fast && fast->next){
+            slow=slow->next;
+            fast=fast->next->next;
+        }
+        return slow;
+    }
+};
+
+// Method 2(Brute Force) :
 
 class Solution {
 public:
