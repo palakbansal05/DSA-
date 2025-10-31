@@ -17,3 +17,26 @@ public:
         return res;
     }
 };
+
+
+//Method 2(Optimized Solution)
+//Time complexity - O(n)
+
+class Solution {
+public:
+    int maxArea(vector<int>& height) {
+        int n=height.size();
+        int res=0;
+        int st=0,end=n-1;
+        while(st<end){
+            int currTrappedWater=(end-st)*min(height[end],height[st]);
+            if(res<currTrappedWater)
+                res=currTrappedWater;
+            if(height[end]>=height[st])
+                st++;
+            else
+                end--;
+        }
+        return res;
+    }
+};
