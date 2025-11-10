@@ -1,3 +1,5 @@
+//Time Complexity: O(nlogn) where n is the size of the input array
+
 class Solution {
 public:
     void merge(int low,int mid,int high,vector<int>& nums){
