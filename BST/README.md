@@ -1,0 +1,1 @@
+This folder will contain all the Binary Search Tree related DSA questions.

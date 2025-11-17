@@ -6,7 +6,7 @@ class Solution {
         for(char ch:s){
             freq[ch-'a']++;
         }
-        int maxFreq=INT_MIN;
+        int maxFreq=0;
         char res;
         for(int i=0;i<26;i++){
             if(freq[i]>maxFreq){
